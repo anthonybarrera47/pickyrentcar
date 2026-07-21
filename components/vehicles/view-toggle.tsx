@@ -17,7 +17,7 @@ export function ViewToggle({ current }: Props) {
   const pathname = usePathname()
 
   return (
-    <ToggleGroup type="single" value={current} spacing={0}>
+    <ToggleGroup value={[current]} spacing={0}>
       <ToggleGroupItem
         value="grid"
         aria-label="Vista grid"

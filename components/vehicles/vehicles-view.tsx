@@ -1,13 +1,8 @@
 "use client"
 
-import {
-  VehiclesGrid,
-  type VehicleRow,
-} from "@/components/vehicles/vehicles-grid"
-import {
-  VehiclesTable,
-  type VehicleRow as VehicleRowTable,
-} from "@/components/vehicles/vehicles-table"
+import { VehiclesGrid } from "@/components/vehicles/vehicles-grid"
+import { VehiclesTable } from "@/components/vehicles/vehicles-table"
+import type { VehicleRow } from "@/components/vehicles/vehicle-card"
 
 type Props = {
   view: "grid" | "table"
@@ -16,7 +11,7 @@ type Props = {
 
 export function VehiclesView({ view, vehicles }: Props) {
   if (view === "table") {
-    return <VehiclesTable vehicles={vehicles as VehicleRowTable[]} />
+    return <VehiclesTable vehicles={vehicles} />
   }
   return <VehiclesGrid vehicles={vehicles} />
 }

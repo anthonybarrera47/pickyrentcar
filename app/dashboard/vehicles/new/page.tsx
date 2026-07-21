@@ -42,7 +42,7 @@ export default function NewVehiclePage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="p-0">
-            <VehicleForm />
+            <VehicleForm mode="create" />
           </CardContent>
         </Card>
       </div>
